@@ -1,0 +1,354 @@
+env:
+  #   # THIS VALUE IS USED TO SET THE `$TERM` ENVIRONMENT VARIABLE FOR
+  #   # EACH INSTANCE OF ALACRITTY. IF IT IS NOT PRESENT, ALACRITTY WILL
+  #   # CHECK THE LOCAL TERMINFO DATABASE AND USE `ALACRITTY` IF IT IS
+  #   # AVAILABLE, OTHERWISE `XTERM-256COLOR` IS USED.
+  TERM: xterm-256color
+
+window:
+  # SPREAD ADDITIONAL PADDING EVENLY AROUND THE TERMINAL CONTENT.
+  opacity: 0.96
+
+  padding:
+    # x: 0
+    # y: 0
+    # dynamic_padding: false
+    x: 10
+    y: 5
+    # # dynamic_padding: false
+
+  # REMOVE BUTTONS
+  # decorations: none
+  # OPEN IN FULL SCREEN
+  # STARTUP_MODE: SIMPLEFULLSCREEN
+  # DIMENSIONS IF NOT SIMPLEFULLSCREEN
+  dimensions:
+    columns: 140
+    lines: 38
+
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  #     - buttonless: Title bar, transparent background and title bar buttons
+  #     - transparent: Title bar, transparent background, but no title bar buttons
+  decorations: full
+
+cursor:
+  # BLOCK UNDERLINE OR BEAM
+  style: Block
+
+font:
+  normal:
+    family: Hack Nerd Font Mono
+    style: Regular
+
+  # BOLD FONT FACE
+  bold:
+    family: Hack Nerd Font Mono
+    style: Bold
+
+  # ITALIC FONT FACE
+  italic:
+    family: Hack Nerd Font Mono
+    style: Italic
+
+  # BOLD ITALIC FONT FACE
+  bold_italic:
+    family: Hack Nerd Font Mono
+    style: Bold Italic
+
+  # FONT SIZE
+  size: 15
+
+  # BETTER FONT RENDERING FOR MAC
+  use_thin_strokes: true
+
+schemes:
+  # TOKYO NIGHT THEME, BASED ON BOTH:
+  #   HTTPS://GITHUB.COM/GHIFARIT53/TOKYONIGHT-VIM
+  #   HTTPS://GITHUB.COM/ENKIA/TOKYO-NIGHT-VSCODE-THEME
+  tokyo-night: &tokyo-night # DEFAULT COLORS
+    primary:
+      background: "0x1a1b26"
+      foreground: "0xa9b1d6"
+
+    # NORMAL COLORS
+    normal:
+      black: "0x32344a"
+      red: "0xf7768e"
+      green: "0x9ece6a"
+      yellow: "0xe0af68"
+      blue: "0x7aa2f7"
+      magenta: "0xad8ee6"
+      cyan: "0x449dab"
+      white: "0x787c99"
+
+    # BRIGHT COLORS
+    bright:
+      black: "0x444b6a"
+      red: "0xff7a93"
+      green: "0xb9f27c"
+      yellow: "0xff9e64"
+      blue: "0x7da6ff"
+      magenta: "0xbb9af7"
+      cyan: "0x0db9d7"
+      white: "0xacb0d0"
+
+  tokyo-night-storm: &tokyo-night-storm # DEFAULT COLORS
+    primary:
+      background: "0x242939"
+      # background: "0x24283b"
+      foreground: "0xa9b1d6"
+
+    # NORMAL COLORS
+    normal:
+      black: "0x32344a"
+      red: "0xf7768e"
+      green: "0x9ece6a"
+      yellow: "0xe0af68"
+      blue: "0x7aa2f7"
+      magenta: "0xad8ee6"
+      cyan: "0x449dab"
+      white: "0x9699a8"
+
+    # BRIGHT COLORS
+    bright:
+      black: "0x444b6a"
+      red: "0xff7a93"
+      green: "0xb9f27c"
+      yellow: "0xff9e64"
+      blue: "0x7da6ff"
+      magenta: "0xbb9af7"
+      cyan: "0x0db9d7"
+      white: "0xacb0d0"
+
+    indexed_colors:
+      - { index: 16, color: "0xff9e64" }
+      - { index: 17, color: "0xdb4b4b" }
+
+colors: *tokyo-night-storm
+draw_bold_text_with_bright_colors: true
+size: 18.0
+tabspaces: 8
+
+
+mouse:
+  # Click settings
+  #
+  # The `double_click` and `triple_click` settings control the time
+  # alacritty should wait for accepting multiple clicks as one double
+  # or triple click.
+  #double_click: { threshold: 300 }
+  #triple_click: { threshold: 300 }
+
+  # If this is `true`, the cursor is temporarily hidden when typing.
+  hide_when_typing: false
+
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 2
+
+  # Faux Scrolling
+  #
+  # The `faux_multiplier` setting controls the number of lines the terminal
+  # should scroll when the alternate screen buffer is active. This is used
+  # to allow mouse scrolling for applications like `man`.
+  #
+  # Specifying `0` will disable faux scrolling.
+  faux_multiplier: 3
+
+  # Scroll to the bottom when new text is written to the terminal.
+  auto_scroll: true
+
+selection:
+  # THIS STRING CONTAINS ALL CHARACTERS THAT ARE USED AS SEPARATORS FOR
+  # "SEMANTIC WORDS" IN ALACRITTY.
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # WHEN TRUE, SELECTED TEXT WILL BE COPIED TO THE PRIMARY CLIPBOARD
+  save_to_clipboard: true
+
+# LOGIN SHELL WITH ARGUMENTS
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+
+# STARTUP DIRECTORY, UNSET OR NONE FOR HOME DIRECTORY
+working_directory: None
+
+debug:
+  # Display the time it takes to redraw each frame.
+  render_timer: false
+
+  # Keep the log file after quitting Alacritty.
+  persistent_logging: false
+
+  # Log level
+  Values for `log_level`:
+    - Off
+    - Error
+    - Warn
+    - Info
+    - Debug
+    - Trace
+  log_level: Warn
+
+  # Print all received window events.
+  print_events: false
+
+  # Highlight window damage information.
+  highlight_damage: false
+
+
+  key_bindings:
+    - { key: W, mods: Command, action: Quit }
+    - { key: V, mods: Control|Shift, action: Paste }
+    - { key: C, mods: Control|Shift, action: Copy }
+    - { key: Equals, mods: Control, action: IncreaseFontSize }
+    - { key: Minus, mods: Control, action: DecreaseFontSize }
+    - { key: D,        mods: Command,       chars: "\x06\x76" } 
+    - { key: D,        mods: Command|Shift, chars: "\x06\x73" }
+    - { key: W,        mods: Command,       chars: "\x06\x78" }
+    - { key: H,        mods: Command,       chars: "\x06\x68" }
+    - { key: J,        mods: Command,       chars: "\x06\x6a" }
+    - { key: K,        mods: Command,       chars: "\x06\x6b" }
+    - { key: L,        mods: Command,       chars: "\x06\x6c" }
+    - { key: T,        mods: Command,       chars: "\x06\x63" }
+    - { key: Key1,     mods: Command,       chars: "\x06\x31" }
+    - { key: Key2,     mods: Command,       chars: "\x06\x32" }
+    - { key: Key3,     mods: Command,       chars: "\x06\x33" }
+    - { key: Key4,     mods: Command,       chars: "\x06\x34" }
+    - { key: Key5,     mods: Command,       chars: "\x06\x35" }
+    - { key: Key6,     mods: Command,       chars: "\x06\x36" }
+    - { key: Key7,     mods: Command,       chars: "\x06\x37" }
+    - { key: Key8,     mods: Command,       chars: "\x06\x38" }
+    - { key: Key9,     mods: Command,       chars: "\x06\x39" }
+    - { key: Left,     mods: Command,       chars: "\x06\x48" }
+    - { key: Down,     mods: Command,       chars: "\x06\x4a" }
+    - { key: Up,       mods: Command,       chars: "\x06\x4b" }
+    - { key: Right,    mods: Command,       chars: "\x06\x4c" }
+
+# Bindings are always filled by default, but will be replaced when a new
+# binding with the same triggers is defined. To unset a default binding, it can
+# be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
+# a no-op if you do not wish to receive input characters for that binding.
+#
+# If the same trigger is assigned to multiple actions, all of them are executed
+# in the order they were defined in.
+#key_bindings:
+  #- { key: Paste,                                       action: Paste          }
+  #- { key: Copy,                                        action: Copy           }
+  #- { key: L,         mods: Control,                    action: ClearLogNotice }
+  #- { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
+  #- { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp,  }
+  #- { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
+  #- { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop,   }
+  #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
+
+  # Vi Mode
+  #- { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
+  #- { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
+  #- { key: Escape,                      mode: Vi|~Search, action: ClearSelection          }
+  #- { key: I,                           mode: Vi|~Search, action: ToggleViMode            }
+  #- { key: I,                           mode: Vi|~Search, action: ScrollToBottom          }
+  #- { key: C,      mods: Control,       mode: Vi|~Search, action: ToggleViMode            }
+  #- { key: Y,      mods: Control,       mode: Vi|~Search, action: ScrollLineUp            }
+  #- { key: E,      mods: Control,       mode: Vi|~Search, action: ScrollLineDown          }
+  #- { key: G,                           mode: Vi|~Search, action: ScrollToTop             }
+  #- { key: G,      mods: Shift,         mode: Vi|~Search, action: ScrollToBottom          }
+  #- { key: B,      mods: Control,       mode: Vi|~Search, action: ScrollPageUp            }
+  #- { key: F,      mods: Control,       mode: Vi|~Search, action: ScrollPageDown          }
+  #- { key: U,      mods: Control,       mode: Vi|~Search, action: ScrollHalfPageUp        }
+  #- { key: D,      mods: Control,       mode: Vi|~Search, action: ScrollHalfPageDown      }
+  #- { key: Y,                           mode: Vi|~Search, action: Copy                    }
+  #- { key: Y,                           mode: Vi|~Search, action: ClearSelection          }
+  #- { key: Copy,                        mode: Vi|~Search, action: ClearSelection          }
+  #- { key: V,                           mode: Vi|~Search, action: ToggleNormalSelection   }
+  #- { key: V,      mods: Shift,         mode: Vi|~Search, action: ToggleLineSelection     }
+  #- { key: V,      mods: Control,       mode: Vi|~Search, action: ToggleBlockSelection    }
+  #- { key: V,      mods: Alt,           mode: Vi|~Search, action: ToggleSemanticSelection }
+  #- { key: Return,                      mode: Vi|~Search, action: Open                    }
+  #- { key: K,                           mode: Vi|~Search, action: Up                      }
+  #- { key: J,                           mode: Vi|~Search, action: Down                    }
+  #- { key: H,                           mode: Vi|~Search, action: Left                    }
+  #- { key: L,                           mode: Vi|~Search, action: Right                   }
+  #- { key: Up,                          mode: Vi|~Search, action: Up                      }
+  #- { key: Down,                        mode: Vi|~Search, action: Down                    }
+  #- { key: Left,                        mode: Vi|~Search, action: Left                    }
+  #- { key: Right,                       mode: Vi|~Search, action: Right                   }
+  #- { key: Key0,                        mode: Vi|~Search, action: First                   }
+  #- { key: Key4,   mods: Shift,         mode: Vi|~Search, action: Last                    }
+  #- { key: Key6,   mods: Shift,         mode: Vi|~Search, action: FirstOccupied           }
+  #- { key: H,      mods: Shift,         mode: Vi|~Search, action: High                    }
+  #- { key: M,      mods: Shift,         mode: Vi|~Search, action: Middle                  }
+  #- { key: L,      mods: Shift,         mode: Vi|~Search, action: Low                     }
+  #- { key: B,                           mode: Vi|~Search, action: SemanticLeft            }
+  #- { key: W,                           mode: Vi|~Search, action: SemanticRight           }
+  #- { key: E,                           mode: Vi|~Search, action: SemanticRightEnd        }
+  #- { key: B,      mods: Shift,         mode: Vi|~Search, action: WordLeft                }
+  #- { key: W,      mods: Shift,         mode: Vi|~Search, action: WordRight               }
+  #- { key: E,      mods: Shift,         mode: Vi|~Search, action: WordRightEnd            }
+  #- { key: Key5,   mods: Shift,         mode: Vi|~Search, action: Bracket                 }
+  #- { key: Slash,                       mode: Vi|~Search, action: SearchForward           }
+  #- { key: Slash,  mods: Shift,         mode: Vi|~Search, action: SearchBackward          }
+  #- { key: N,                           mode: Vi|~Search, action: SearchNext              }
+  #- { key: N,      mods: Shift,         mode: Vi|~Search, action: SearchPrevious          }
+
+  # Search Mode
+  #- { key: Return,                mode: Search|Vi,  action: SearchConfirm         }
+  #- { key: Escape,                mode: Search,     action: SearchCancel          }
+  #- { key: C,      mods: Control, mode: Search,     action: SearchCancel          }
+  #- { key: U,      mods: Control, mode: Search,     action: SearchClear           }
+  #- { key: W,      mods: Control, mode: Search,     action: SearchDeleteWord      }
+  #- { key: P,      mods: Control, mode: Search,     action: SearchHistoryPrevious }
+  #- { key: N,      mods: Control, mode: Search,     action: SearchHistoryNext     }
+  #- { key: Up,                    mode: Search,     action: SearchHistoryPrevious }
+  #- { key: Down,                  mode: Search,     action: SearchHistoryNext     }
+  #- { key: Return,                mode: Search|~Vi, action: SearchFocusNext       }
+  #- { key: Return, mods: Shift,   mode: Search|~Vi, action: SearchFocusPrevious   }
+
+  # (Windows, Linux, and BSD only)
+  #- { key: V,              mods: Control|Shift, mode: ~Vi,        action: Paste            }
+  #- { key: C,              mods: Control|Shift,                   action: Copy             }
+  #- { key: F,              mods: Control|Shift, mode: ~Search,    action: SearchForward    }
+  #- { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
+  #- { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
+  #- { key: Insert,         mods: Shift,                           action: PasteSelection   }
+  #- { key: Key0,           mods: Control,                         action: ResetFontSize    }
+  #- { key: Equals,         mods: Control,                         action: IncreaseFontSize }
+  #- { key: Plus,           mods: Control,                         action: IncreaseFontSize }
+  #- { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
+  #- { key: Minus,          mods: Control,                         action: DecreaseFontSize }
+  #- { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
+
+  # (Windows only)
+  #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
+
+  # (macOS only)
+  #- { key: K,              mods: Command, mode: ~Vi|~Search, chars: "\x0c"                 }
+  #- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory          }
+  #- { key: Key0,           mods: Command,                    action: ResetFontSize         }
+  #- { key: Equals,         mods: Command,                    action: IncreaseFontSize      }
+  #- { key: Plus,           mods: Command,                    action: IncreaseFontSize      }
+  #- { key: NumpadAdd,      mods: Command,                    action: IncreaseFontSize      }
+  #- { key: Minus,          mods: Command,                    action: DecreaseFontSize      }
+  #- { key: NumpadSubtract, mods: Command,                    action: DecreaseFontSize      }
+  #- { key: V,              mods: Command,                    action: Paste                 }
+  #- { key: C,              mods: Command,                    action: Copy                  }
+  #- { key: C,              mods: Command, mode: Vi|~Search,  action: ClearSelection        }
+  #- { key: H,              mods: Command,                    action: Hide                  }
+  #- { key: H,              mods: Command|Alt,                action: HideOtherApplications }
+  #- { key: M,              mods: Command,                    action: Minimize              }
+  #- { key: Q,              mods: Command,                    action: Quit                  }
+  #- { key: W,              mods: Command,                    action: Quit                  }
+  #- { key: N,              mods: Command,                    action: SpawnNewInstance      }
+  #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
+  #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
+  #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }

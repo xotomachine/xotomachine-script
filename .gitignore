@@ -1,0 +1,6 @@
+# CUSTOM DOT FILES TO KEEP OFF GIT
+
+configstore
+NuGet
+thefuck
+iterm2
