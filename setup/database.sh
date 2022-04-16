@@ -5,7 +5,8 @@ sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mo
 
 sudo apt-get update
 
-set -ex && sudo apt-get install --yes --no-install-recommends --allow-unauthenticated mongodb
+set -ex && sudo apt-get install --yes --no-install-recommends --allow-unauthenticated \
+  mongodb
 
 ###################################### POSTGRES
 
@@ -14,4 +15,6 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 
 sudo apt-get update
 
-set -ex && sudo apt-get install --yes --no-install-recommends --allow-unauthenticated postgresql-${POSTGRES_VERSION} postgresql-contrib
+set -ex && sudo apt-get install --yes --no-install-recommends --allow-unauthenticated \
+  postgresql-${POSTGRES_VERSION} \
+  postgresql-contrib

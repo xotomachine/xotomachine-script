@@ -20,9 +20,6 @@ export GITSTATUS_VERSION="1.0.0"
 # ENVIRONMENT VARS
 export DOTFILE_REPO="https://github.com/xotomachine/xotomachine-dotfiles.git"
 
-# REPO_PATH
-export REPO_PATH="packages/xotomachine-script/setup"
-
 ######################################################
 
 chmod a+x /setup/*.sh
