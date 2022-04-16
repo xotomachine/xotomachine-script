@@ -8,6 +8,7 @@ set -ex &&
     rsync \
     unzip \
     apt-utils \
+    hub \
     gpg-agent \
     wget \
     curl \

@@ -4,12 +4,9 @@ set -ex && sudo apt-get install --yes --no-install-recommends --allow-unauthenti
   tmux \
   vim
 
-sudo curl -LO https://github.com/neovim/neovim/releases/download/v${NEOVIM_VERSION}/nvim.appimage ${USER_HOME}/nvim.appimage | bash
-sudo chmod u+x ${USER_HOME}/nvim.appimage
-sudo ${USER_HOME}/nvim.appimage --appimage-extract
-sudo ${USER_HOME}/squashfs-root/AppRun --version
-sudo rsync squashfs-root /
-sudo ln -sf /squashfs-root/AppRun /usr/bin/nvim
+sudo curl -LO https://github.com/neovim/neovim/releases/download/v${NEOVIM_VERSION}/nvim-linux64.tar.gz ${USER_HOME}/nvim-linux64.tar.gz | bash
+tar xzvf ${USER_HOME}/nvim-linux64.tar.gz
+sudo ln -sf ${USER_HOME}/nvim-linux64/bin/nvim /usr/bin/nvim
 
 ################################################ GIT
 
