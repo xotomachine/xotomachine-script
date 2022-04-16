@@ -33,8 +33,7 @@ fi
 nvm install v15
 nvm use v15
 
-npm i yarn -g
-npm i lerna i -g
+npm i @angular/cli @vue/cli coc.nvim commitizen corepack create-single-spa depcheck docma eslint_d eslint express generator-code ionic jest lerna nodemon npm-check-updates npm-check npm-install-peers npm-upgrade pnpm prettier readme-md-generator reveal-md stylelint stylus tls-test ts-node tsd tslint-etc tslint typescript typings undefined vsc-leetcode-cli vsce vsts-npm-auth vue-cli vue-migration-helper vue-tslint webpack-dev-server yo yarn lerna typescript  -g
 
 ################################################ DOCKER
 
@@ -54,3 +53,6 @@ mkdir -p "$USER_HOME/.ssh"
 chown -R $USER_NAME $USER_HOME/.ssh
 ssh-keygen -t rsa -C $EMAIL -q -f "$USER_HOME/.ssh/id_rsa" -N ""
 eval "$(ssh-agent -s)"
+
+
+
