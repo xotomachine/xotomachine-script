@@ -33,7 +33,7 @@ fi
 nvm install v15
 nvm use v15
 
-npm i @angular/cli @vue/cli coc.nvim commitizen corepack create-single-spa depcheck docma eslint_d eslint express generator-code ionic jest lerna nodemon npm-check-updates npm-check npm-install-peers npm-upgrade pnpm prettier readme-md-generator reveal-md stylelint stylus tls-test ts-node tsd tslint-etc tslint typescript typings undefined vsc-leetcode-cli vsce vsts-npm-auth vue-cli vue-migration-helper vue-tslint webpack-dev-server yo yarn lerna typescript  -g
+npm i @angular/cli @vue/cli coc.nvim docma eslint express ionic jest nodemon npm-check pnpm prettier stylelint ts-node tslint typescript yo yarn lerna typescript  -g
 
 ################################################ DOCKER
 
