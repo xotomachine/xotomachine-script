@@ -1,4 +1,5 @@
-# AS ROOT
+# ssh -XC root@IP-ADDRESS
+# cd / and AS ROOT
 
 ######################################################
 
@@ -8,6 +9,10 @@ echo 'EMAIL=xotomachine@gmail.com' >> /etc/environment
 echo 'NAME=xotomachine' >> /etc/environment
 echo 'USER_NAME=xotomachine' >> /etc/environment
 echo 'USER_GROUP=machine' >> /etc/environment
+
+
+echo 'USER_HOME=/home/xotomachine' >> /etc/environment
+echo 'ZSH_CUSTOM=/home/xotomachine/.oh-my-zsh/custom' >> /etc/environment
 
 # VERSIONS
 echo 'NVM_VERSION=0.33.2' >> /etc/environment
