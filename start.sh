@@ -22,24 +22,24 @@ export DOTFILE_REPO="https://github.com/xotomachine/xotomachine-dotfiles.git"
 
 ######################################################
 
-chmod a+x /setup/*.sh
+chmod a+x ./setup/*.sh
 
-sh /setup/root.sh
+sudo sh ./setup/root.sh
 
 su - $USER_NAME
 cd ${USER_HOME}
 
-sh /setup/apts.sh
-sh /setup/language.sh
-sh /setup/database.sh
-sh /setup/zsh.sh
-sh /setup/dotfiles.sh
-sh /setup/package.sh
-sh /setup/ccat.sh
+sudo sh ./setup/apts.sh
+sudo sh ./setup/language.sh
+sudo sh ./setup/database.sh
+sudo sh ./setup/zsh.sh
+sudo sh ./setup/dotfiles.sh
+sudo sh ./setup/package.sh
+sudo sh ./setup/ccat.sh
 
 cp -g $USER_GROUP -o $USER_NAME ./setup/ccat /usr/local/bin/
 
-sh /setup/clean.sh
+sudo sh ./setup/clean.sh
 zsh
 
 ######################################################
