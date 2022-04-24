@@ -2,6 +2,8 @@
 
 ######################################################
 
+cd ~
+
 sh /xotomachine-docker/packages/xotomachine-script/setup/apts.sh
 sh /xotomachine-docker/packages/xotomachine-script/setup/language.sh
 sh /xotomachine-docker/packages/xotomachine-script/setup/database.sh
