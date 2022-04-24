@@ -1,10 +1,10 @@
 # ssh -XC root@IP-ADDRESS
-# cd / and AS ROOT
+# cd /
+# git clone --recurse-submodules https://github.com/xotomachine/xotomachine-docker.git > /dev/null
 
 ######################################################
 
 # PROFILE
-# Force encoding
 echo 'EMAIL=xotomachine@gmail.com' >> /etc/environment
 echo 'NAME=xotomachine' >> /etc/environment
 echo 'USER_NAME=xotomachine' >> /etc/environment
@@ -36,32 +36,7 @@ sudo sh /xotomachine-docker/packages/xotomachine-script/setup/root.sh
 
 ######################################################
 
-
-sudo -i -u ${USER_NAME} bash << EOF
-
-# ssh -XC USERNAME@IP-ADDRESS
-# LOGIN AS $USERNAME AND RUN :
-
-######################################################
-
-cd ${USER_NAME}
-
-sudo sh /xotomachine-docker/packages/xotomachine-script/setup/apts.sh
-sudo sh /xotomachine-docker/packages/xotomachine-script/setup/language.sh
-sudo sh /xotomachine-docker/packages/xotomachine-script/setup/database.sh
-sudo sh /xotomachine-docker/packages/xotomachine-script/setup/zsh.sh
-sudo sh /xotomachine-docker/packages/xotomachine-script/setup/dotfiles.sh
-sudo sh /xotomachine-docker/packages/xotomachine-script/setup/package.sh
-sudo sh /xotomachine-docker/packages/xotomachine-script/setup/ccat.sh
-
-cp -g $USER_GROUP -o $USER_NAME /xotomachine-docker/packages/xotomachine-script/setup/ccat /usr/local/bin/
-
-sudo sh /xotomachine-docker/packages/xotomachine-script/setup/clean.sh
-sudo rm -rf /etc/environment
-
-zsh
-
-######################################################
-
-EOF
-echo "complete please run -> su - ${USER_NAME}"
+echo "FINISHED ~ 🍰"
+echo "Complete script by running -> "
+echo "1. su - ${USER_NAME}"
+echo "2. sh /xotomachine-docker/packages/xotomachine-script/install.sh"

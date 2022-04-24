@@ -1,9 +1,9 @@
-# ssh -XC USERNAME@IP-ADDRESS
 # LOGIN AS $USERNAME AND RUN :
+# sh /xotomachine-docker/packages/xotomachine-script/install.sh
 
 ######################################################
 
-cd ~
+cd ${USER_NAME}
 
 sudo sh /xotomachine-docker/packages/xotomachine-script/setup/apts.sh
 sudo sh /xotomachine-docker/packages/xotomachine-script/setup/language.sh
