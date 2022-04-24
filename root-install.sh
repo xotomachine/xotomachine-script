@@ -38,5 +38,5 @@ sudo sh /xotomachine-docker/packages/xotomachine-script/setup/root.sh
 
 echo "FINISHED ~ 🍰"
 echo "Complete script by running -> "
-echo "1. su - ${USER_NAME}"
-echo "2. sh /xotomachine-docker/packages/xotomachine-script/install.sh"
+echo `1. su - ${USER_NAME}`
+echo "2. sh /xotomachine-docker/packages/xotomachine-script/user-install.sh"
