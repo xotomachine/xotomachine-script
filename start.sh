@@ -26,7 +26,7 @@ chmod a+x ./setup/*.sh
 
 sudo sh ./setup/root.sh
 
-su - $USER_NAME
+sudo su - $USER_NAME
 cd ${USER_HOME}
 
 sudo sh ./setup/apts.sh
