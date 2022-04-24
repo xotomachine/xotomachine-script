@@ -1,9 +1,9 @@
 ######################################################
 
 # PROFILE
-export EMAIL="xotoguest@gmail.com"
-export NAME="xotoguest"
-export USER_NAME="xotoguest"
+export EMAIL="xotomachine@gmail.com"
+export NAME="xotomachine"
+export USER_NAME="xotomachine"
 export USER_GROUP="machine"
 
 # VERSIONS
