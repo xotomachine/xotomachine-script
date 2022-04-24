@@ -30,8 +30,38 @@ echo 'DOTFILE_REPO=https://github.com/xotomachine/xotomachine-dotfiles.git' >> /
 
 ######################################################
 
-chmod a+x /xotomachine-docker/packages/xotomachine-script/setup/*.sh
+sudo chmod a+x /xotomachine-docker/packages/xotomachine-script/setup/*.sh
 
 sudo sh /xotomachine-docker/packages/xotomachine-script/setup/root.sh
 
 ######################################################
+
+
+sudo -i -u ${USER_NAME} bash << EOF
+
+# ssh -XC USERNAME@IP-ADDRESS
+# LOGIN AS $USERNAME AND RUN :
+
+######################################################
+
+cd ${USER_NAME}
+
+sudo sh /xotomachine-docker/packages/xotomachine-script/setup/apts.sh
+sudo sh /xotomachine-docker/packages/xotomachine-script/setup/language.sh
+sudo sh /xotomachine-docker/packages/xotomachine-script/setup/database.sh
+sudo sh /xotomachine-docker/packages/xotomachine-script/setup/zsh.sh
+sudo sh /xotomachine-docker/packages/xotomachine-script/setup/dotfiles.sh
+sudo sh /xotomachine-docker/packages/xotomachine-script/setup/package.sh
+sudo sh /xotomachine-docker/packages/xotomachine-script/setup/ccat.sh
+
+cp -g $USER_GROUP -o $USER_NAME /xotomachine-docker/packages/xotomachine-script/setup/ccat /usr/local/bin/
+
+sudo sh /xotomachine-docker/packages/xotomachine-script/setup/clean.sh
+sudo rm -rf /etc/environment
+
+zsh
+
+######################################################
+
+EOF
+echo "complete please run -> su - ${USER_NAME}"
