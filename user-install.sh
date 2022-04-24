@@ -1,5 +1,5 @@
 # LOGIN AS $USERNAME AND RUN :
-# sh /xotomachine-docker/packages/xotomachine-script/install.sh
+# sh /xotomachine-docker/packages/xotomachine-script/user-install.sh
 
 ######################################################
 
