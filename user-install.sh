@@ -20,7 +20,6 @@ sudo sh /xotomachine-docker/packages/xotomachine-script/setup/package.sh
 sudo sh /xotomachine-docker/packages/xotomachine-script/setup/ccat.sh
 
 cp -g $USER_GROUP -o $USER_NAME /xotomachine-docker/packages/xotomachine-script/setup/ccat /usr/local/bin/
-
 sudo sh /xotomachine-docker/packages/xotomachine-script/setup/clean.sh
 
 ######################################################
