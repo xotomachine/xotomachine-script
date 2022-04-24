@@ -27,7 +27,7 @@ chmod a+x /xotomachine-docker/packages/xotomachine-script/setup/*.sh
 
 sudo sh /xotomachine-docker/packages/xotomachine-script/setup/root.sh
 
-su - $USER_NAME
+su - $USER_NAME <<EOF
 cd ${USER_HOME}
 
 sudo sh /xotomachine-docker/packages/xotomachine-script/setup/apts.sh
@@ -43,5 +43,7 @@ cp -g $USER_GROUP -o $USER_NAME /xotomachine-docker/packages/xotomachine-script/
 sudo sh /xotomachine-docker/packages/xotomachine-script/setup/clean.sh
 
 zsh
+
+EOF
 
 ######################################################
