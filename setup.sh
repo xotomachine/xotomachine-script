@@ -53,7 +53,6 @@ sudo sh ./xotomachine-script/setup/ccat.sh
 
 cp -o $USER_NAME ./xotomachine-script/setup/ccat /usr/local/bin/
 sudo sh ./xotomachine-script/setup/clean.sh
-sudo chsh -s /bin/zsh
 
 chsh -s $(which zsh)
 
