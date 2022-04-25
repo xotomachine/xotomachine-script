@@ -5,5 +5,7 @@
 - Bash
 
 ### ✅ RUN WITH BASH
-> to install and run with bash follow :
-- [BASH](./documentation/BASH.md)
+``` shell
+# one liner after cd into : ~ folder
+git clone https://github.com/xotomachine/xotomachine-script.git && sh ./xotomachine-script/setup.sh username
+```
