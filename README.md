@@ -9,3 +9,20 @@
 # one liner after cd into : ~ folder
 git clone https://github.com/xotomachine/xotomachine-script.git && sh ./xotomachine-script/setup.sh username
 ```
+
+### 👾 INSTALL NVIM PACKER
+
+```shell
+# SYNC ALL PLUGS
+nvim +PackerSync
+```
+
+### 📚 INSTALL NVIM LSP
+
+Enter `:LspInstall` followed by the name of the server you want to install<br>
+Example: `:LspInstall pyright`
+
+```shell
+# INSTALL LSP SERVERS
+:LspInstall vuels jdtls kotlin_language_server tsserver angularls stylelint_lsp cssmodules_ls cssls jsonls dockerls html eslint sumneko_lua clangd vimls emmet_ls graphql
+```

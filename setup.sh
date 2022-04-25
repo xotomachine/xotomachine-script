@@ -53,11 +53,18 @@ sudo sh ./xotomachine-script/setup/ccat.sh
 cp -o $USER_NAME ./xotomachine-script/setup/ccat /usr/local/bin/
 sudo sh ./xotomachine-script/setup/clean.sh
 
-chsh -s $(which zsh)
+zsh
 
 ######################################################
 
-echo "FINISHED ~ 🍰"
-echo "Complete script by running -> "
-echo "1. su - $USER_NAME"
-echo "2. sh user-install.sh"
+echo " ___________________   "
+echo "	< FINISHED >         "
+echo " -------------------   "
+echo "   \                   "
+echo "    \                  "
+echo "        .--.           "
+echo "       |o_o |          "
+echo "       |:_/ |          "
+echo "      //   \ \         "
+echo "     (|     | )        "
+echo "    /'\_   _/`\        "
