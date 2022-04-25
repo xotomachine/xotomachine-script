@@ -2,35 +2,35 @@
 
 USER_NAME=$1
 
-echo 'USER_NAME=' + ${USER_NAME} >>/etc/environment
+echo 'USER_NAME=$USER_NAME' >>/etc/environment
 
 # SET HOME ENV
 if [ "$USER_NAME" = "root" ]; then
-  echo 'USER_HOME=/' + ${USER_NAME} >>/etc/environment
-  echo 'ZSH_CUSTOM=/' + ${USER_NAME} + '/.oh-my-zsh/custom' >>/etc/environment
+  echo "USER_HOME=/$USER_NAME" >>/etc/environment
+  echo "ZSH_CUSTOM=/$USER_NAME/.oh-my-zsh/custom" >>/etc/environment
 else
-  echo 'USER_HOME=/home/' + ${USER_NAME} >>/etc/environment
-  echo 'ZSH_CUSTOM=/home/' + ${USER_NAME} + '/.oh-my-zsh/custom' >>/etc/environment
+  echo "USER_HOME=/home/$USER_NAME" >>/etc/environment
+  echo "ZSH_CUSTOM=/home/$USER_NAME/.oh-my-zsh/custom" >>/etc/environment
 fi
 
 # PROFILE
-echo 'EMAIL=xotomachine@gmail.com' >>/etc/environment
-echo 'NAME=xotomachine' >>/etc/environment
-echo 'USER_GROUP=machine' >>/etc/environment
+echo "EMAIL=xotomachine@gmail.com" >>/etc/environment
+echo "NAME=xotomachine" >>/etc/environment
+echo "USER_GROUP=machine" >>/etc/environment
 
 # VERSIONS
-echo 'NVM_VERSION=0.33.2' >>/etc/environment
-echo 'NEOVIM_VERSION=0.7.0' >>/etc/environment
-echo 'YARN_VERSION=1.8.0' >>/etc/environment
-echo 'POSTGRES_VERSION=12' >>/etc/environment
-echo 'JAVA_VERSION=11' >>/etc/environment
-echo 'RUBBY_VERSION=2.1.1' >>/etc/environment
-echo 'NERDS_FONT_VERSION=2.1.0' >>/etc/environment
-echo 'FZF_VERSION=0.21.1' >>/etc/environment
-echo 'GITSTATUS_VERSION=1.0.0' >>/etc/environment
+echo "NVM_VERSION=0.33.2" >>/etc/environment
+echo "NEOVIM_VERSION=0.7.0" >>/etc/environment
+echo "YARN_VERSION=1.8.0" >>/etc/environment
+echo "POSTGRES_VERSION=12" >>/etc/environment
+echo "JAVA_VERSION=11" >>/etc/environment
+echo "RUBBY_VERSION=2.1.1" >>/etc/environment
+echo "NERDS_FONT_VERSION=2.1.0" >>/etc/environment
+echo "FZF_VERSION=0.21.1" >>/etc/environment
+echo "GITSTATUS_VERSION=1.0.0" >>/etc/environment
 
 # ENVIRONMENT VARS
-echo 'DOTFILE_REPO=https://github.com/xotomachine/xotomachine-dotfiles.git' >>/etc/environment
+echo "DOTFILE_REPO=https://github.com/xotomachine/xotomachine-dotfiles.git" >>/etc/environment
 
 ###################################################### setup script
 
