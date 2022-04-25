@@ -34,7 +34,6 @@ echo 'DOTFILE_REPO=https://github.com/xotomachine/xotomachine-dotfiles.git' >>/e
 
 ###################################################### setup script
 
-sudo sh ./xotomachine-script/env.sh
 sudo chmod a+x ./xotomachine-script/setup/*.sh
 
 ######################################################
